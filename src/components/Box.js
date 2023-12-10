@@ -7,6 +7,8 @@ import Row from './Row';
 import Logo from '../images/logo.png';
 
 const Box = () => {
+    // eslint-disable-next-line
+    console.log('source-maps');
     return (
         <>
             <h1>
