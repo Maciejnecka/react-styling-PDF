@@ -13,6 +13,11 @@ const DefaultStyledRow = styled.div`
         `};
     border: 2px solid var(--color-alfa);
     padding: 20px;
+
+    @media ${(props) => props.theme.media.tablet} {
+        margin: 0 40px;
+    }
+
     &:hover {
         background-color: #fcc5c2;
     }
