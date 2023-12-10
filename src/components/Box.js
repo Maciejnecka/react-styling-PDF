@@ -2,7 +2,7 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import Row from './Row';
+import Row from './styled/Row';
 
 import Logo from '../images/logo.png';
 
