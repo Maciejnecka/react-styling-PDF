@@ -37,6 +37,10 @@ module.exports = {
                 // loaderow, tj. od lewej do prawej.
             },
             {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
                 test: /\.(png|svg|jpg|gif)$/,
                 // dodaje rozszerzenia obrazów
                 use: 'file-loader',
