@@ -1,19 +1,31 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/function-component-definition */
-import React from 'react';
-import classNames from 'classnames';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import styled, { css } from 'styled-components';
 
-import '../../styles/Row.scss';
+const DefaultStyledRow = styled.div`
+    --color-alfa: ${(props) => props.theme.colorAlfa};
+    color: var(--color-alfa);
+    background-color: #fce2c2;
+    ${(props) =>
+        props.type === 'dark' &&
+        css`
+            background-color: #c5aeb4;
+            color: #fce2c2;
+        `};
+    border: 2px solid var(--color-alfa);
+    padding: 20px;
+    &:hover {
+        background-color: #fcc5c2;
+    }
 
-const Row = (props) => {
-    const { type, space } = props;
+    h1 {
+        font-size: 20px;
+    }
 
-    const className = classNames('Row', {
-        [`Row--${type}`]: type,
-        [`Row--space-${space}`]: space,
-    });
-    return <div className={className}>React: Styling, classnames</div>;
-};
+    p {
+        font-size: 12px;
+    }
+`;
 
-export default Row;
+const StyledRow = styled(DefaultStyledRow)((props) => props.style);
+
+export default StyledRow;

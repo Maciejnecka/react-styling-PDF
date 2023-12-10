@@ -2,24 +2,22 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ThemeProvider } from 'styled-components';
+
 import Row from './styled/Row';
 
-import Logo from '../images/logo.png';
-
 const Box = () => {
-    // eslint-disable-next-line
-    console.log('source-maps');
+    const rowStyle = {
+        padding: '100px',
+    };
+
     return (
         <>
-            <h1>
-                <img src={Logo} alt="" />
-                devmentor.pl
-            </h1>
-            <p>
-                Uczę się <em>efektywnie</em> pod okiem Mentora!
-            </p>
             <Row type="dark" />
-            <Row space="medium" />
+            <ThemeProvider theme={{ colorAlfa: 'blue' }}>
+                <Row style={rowStyle} />
+            </ThemeProvider>
         </>
     );
 };
