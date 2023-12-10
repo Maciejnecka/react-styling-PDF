@@ -28,7 +28,19 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                // tylko pliki z rozszerzeniem .css
+                exclude: /node_modules/,
+                // wykluczam pliki zawierajace
+                // wpisany ciag znakow w sciezce
                 use: ['style-loader', 'css-loader'],
+                // okreslam kolejnosc wykorzystanych
+                // loaderow, tj. od lewej do prawej.
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                // dodaje rozszerzenia obrazów
+                use: 'file-loader',
+                // w webpacku 5 nie wpisujemy tu juz loadera
             },
         ],
         // obecnie brak dodatkowych ustawień

@@ -4,6 +4,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import '../styles/Row.css';
+
 const Row = (props) => {
     const { type, space } = props;
 
