@@ -1,8 +1,8 @@
+/* eslint-disable react/function-component-definition */
 // ./src/components/App.js
 import React from 'react';
+import Box from './Box';
 
-const App = function () {
-    return <h1>Hello world</h1>;
-};
+const App = () => <Box />;
 
 export default App;
