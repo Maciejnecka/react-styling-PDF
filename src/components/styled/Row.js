@@ -1,7 +1,15 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const loadAnimation = keyframes`
+0% {opacity: 0; transform: translateX(-100vw);}
+25% {opacity: .25; transform: translateX(-50vw);}
+75% {opacity: .25; transform: translateX(-100vw);}
+100% {opacity: 1; transform: translateX(0);}
+`;
 
 const DefaultStyledRow = styled.div`
+    animation: ${loadAnimation} 3s;
     --color-alfa: ${(props) => props.theme.colorAlfa};
     color: var(--color-alfa);
     background-color: #fce2c2;
@@ -13,6 +21,7 @@ const DefaultStyledRow = styled.div`
         `};
     border: 2px solid var(--color-alfa);
     padding: 20px;
+    transition: 2s;
 
     @media ${(props) => props.theme.media.tablet} {
         margin: 0 40px;
