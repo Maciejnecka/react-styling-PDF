@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import styled, { css, keyframes } from 'styled-components';
+import logo from '../../images/logo.png';
 
 const loadAnimation = keyframes`
 0% {opacity: 0; transform: translateX(-100vw);}
@@ -19,6 +20,9 @@ const DefaultStyledRow = styled.div`
             background-color: #c5aeb4;
             color: #fce2c2;
         `};
+    background-image: url(${logo});
+    background-repeat: no-repeat;
+    background-position: right bottom;
     border: 2px solid var(--color-alfa);
     padding: 20px;
     transition: 2s;
