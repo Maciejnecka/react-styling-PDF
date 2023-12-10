@@ -1,9 +1,8 @@
 // ./src/components/App.js
 import React from 'react';
-import Box from './Box';
 
 const App = function () {
-    return <Box />;
+    return <h1>Hello world</h1>;
 };
 
 export default App;
