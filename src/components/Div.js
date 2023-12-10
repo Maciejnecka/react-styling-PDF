@@ -23,12 +23,20 @@
 // }
 
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
 const StyledDiv = styled.div`
     --color-alfa: #6cb2d1;
-    background-color: #fce2c2;
-    border: 2px solid var(--color-alfa);
     color: var(--color-alfa);
+    background-color: #fce2c2;
+    ${(props) =>
+        props.type === 'dark' &&
+        css`
+            background-color: #c5aeb4;
+            color: #fce2c2;
+        `};
+
+    border: 2px solid var(--color-alfa);
     padding: 20px;
     &:hover {
         background-color: #fcc5c2;
@@ -42,7 +50,7 @@ const StyledDiv = styled.div`
 `;
 const Div = ({ style = {}, type }) => {
     return (
-        <StyledDiv>
+        <StyledDiv type={type}>
             <h1>React: Styled Components</h1>
             <p>Lorem ipsum dolor sit amet.</p>
         </StyledDiv>
